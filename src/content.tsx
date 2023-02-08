@@ -21,29 +21,6 @@ export const getStyle: PlasmoGetStyle = () => {
 
 const storage = new Storage()
 
-// window.addEventListener("load", () => {
-
-
-//   const devWindow = document.createElement("div");
-//   // devWindow.style.position = "fixed";
-//   // devWindow.style.bottom = "0";
-//   // devWindow.style.width = "100vw";
-//   // devWindow.style.backgroundColor = "white";
-//   // devWindow.style.padding = "10px";
-//   // devWindow.style.boxSizing = "border-box";
-//   // devWindow.style.borderTop = "1px solid black";
-//   // devWindow.style.display = "flex";
-//   // devWindow.style.justifyContent = "space-between";
-//   // devWindow.style.alignItems = "center";
-//   devWindow.className = "rounded-md fixed bottom-0 w-full bg-white p-2 border-t-2 border-black flex justify-between items-center";
-
-//   devWindow.innerHTML = `
-//     <div>
-//       <button id="save">Save</button>
-//       <button id="load">Load</button>
-//       </div>`
-
-//   document.querySelector("body").appendChild(devWindow)
 
 const inputs = document.querySelectorAll("input");
 
@@ -79,12 +56,6 @@ inputs.forEach(async (input: HTMLInputElement) => {
 })
 storage.set("page-inputs", serializableInputs);
 
-
-
-// chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-//   console.log(message)
-//   i[message.id].value = message.content;
-// })
 
 
 const ContentScript = () => {
